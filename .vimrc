@@ -15,6 +15,13 @@ let g:syntastic_check_on_wq = 0
 " Open NERDTree on start up
 autocmd vimenter * NERDTree
 
+let NERDTreeShowHidden=1
+map <C-o> :NERDTreeToggle %<CR>
+
+" Set CTRLP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Show number lines
 set number
 " Show relative line number
@@ -39,6 +46,4 @@ set wrap "Wrap lines
 
 " Auto reload vim config on settings update"
 autocmd bufwritepost .vimrc source $MYVIMRC
-
-colorscheme desert
-set background=dark
+colorscheme molokai
